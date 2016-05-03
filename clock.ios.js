@@ -60,12 +60,7 @@ class Clock extends Component {
     return (
         
         <View style={styles.flowRight}>
-  <TextInput
-    style={styles.searchInput}
-    placeholder='ligne'/>
-        <TextInput
-    style={styles.searchInput}
-    placeholder='station'/>
+  
   <TouchableHighlight style={styles.button}
       underlayColor='#99d9f4'>
     <Text style={styles.buttonText}>Go</Text>
