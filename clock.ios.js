@@ -42,6 +42,10 @@ button: {
   alignSelf: 'stretch',
   justifyContent: 'center'
 },
+ image: {
+  width: 217,
+  height: 138
+},
 searchInput: {
   height: 36,
   padding: 4,
@@ -58,7 +62,8 @@ searchInput: {
 class Clock extends Component {
   render() {
     return (
-        
+        <View style={styles.container}>
+         <Image source={require('image!logo')} style={styles.image}/>
         <View style={styles.flowRight}>
   <TextInput
     style={styles.searchInput}
@@ -70,6 +75,7 @@ class Clock extends Component {
       underlayColor='#99d9f4'>
     <Text style={styles.buttonText}>Go</Text>
   </TouchableHighlight>
+</View>
 </View>
       
     );
