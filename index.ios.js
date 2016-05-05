@@ -1,10 +1,9 @@
-'use strict';
-
 var React = require('react-native');
 var Home = require('./home.ios');
-var Clock = require('./clock.ios');
+var Nav= require('./nav.ios');
 var Search = require('./search.ios');
 var List = require('./list.ios');
+var Firebase = require('firebase');
 
 
 var {
@@ -16,12 +15,13 @@ var {
 
 
 
-class devdactic_tabs extends Component {
+class Vski extends Component {
     constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'home'
+      selectedTab: 'nav'
     };
+        
   }
     render() {
     return (
@@ -40,14 +40,14 @@ class devdactic_tabs extends Component {
         </TabBarIOS.Item>
           
         <TabBarIOS.Item
-          selected={this.state.selectedTab === 'clock'}
+          selected={this.state.selectedTab === 'nav'}
           icon={require('./clock.png')}
           onPress={() => {
                 this.setState({
-                    selectedTab: 'clock',
+                    selectedTab: 'nav',
                 });
           }}>
-          <Clock/>
+          <Nav/>
             </TabBarIOS.Item>
               
               <TabBarIOS.Item
@@ -77,4 +77,4 @@ class devdactic_tabs extends Component {
   }
 }
 
-AppRegistry.registerComponent('devdactic_tabs', () => devdactic_tabs);
+AppRegistry.registerComponent('Vski', () => Vski);
